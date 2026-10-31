@@ -1,6 +1,7 @@
 module DifferentialGamesBenchmarks
 
 using LinearAlgebra
+using Random
 import DifferentialGamesBase
 
 # ============================================================================
@@ -41,6 +42,7 @@ include("cases/homicidal_chauffeur.jl")
 include("cases/two_cars.jl")
 include("cases/lady_in_the_lake.jl")
 include("cases/lq_formation.jl")
+include("cases/stochastic_lq.jl")
 include("cases/hallway_passing.jl")
 include("cases/racing.jl")
 include("cases/falcon_suite.jl")
@@ -109,6 +111,14 @@ export
     LADY_IN_THE_LAKE_RADIUS,
     lady_in_the_lake_evaluator,
     lady_in_the_lake_landing_metrics,
+    STOCHASTIC_LQ_ADDITIVE_V1,
+    CHANCE_CONSTRAINED_LQ_BOUND_V1,
+    CHANCE_CONSTRAINED_LQ_JOINT_V1,
+    STOCHASTIC_LQ_CHANCE_RISK,
+    STOCHASTIC_LQ_CHANCE_BOUND,
+    stochastic_policy_rollouts,
+    stochastic_expected_cost_error,
+    chance_violation_rates,
     LQ_FORMATION_NOMINAL_V1,
     LQ_FORMATION_OFFSET,
     lq_formation_evaluator,
