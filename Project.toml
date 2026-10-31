@@ -1,13 +1,39 @@
 name = "DifferentialGamesBenchmarks"
 uuid = "361c6073-4581-487d-842c-1908ac8c4452"
-authors = ["BennetOutland <bennet.outland@pm.me> and contributors"]
 version = "1.0.0-DEV"
+authors = ["BennetOutland <bennet.outland@pm.me> and contributors"]
+
+[deps]
+DifferentialGamesBase = "a9dd1e63-b4ad-4579-bca8-3a609f3d87b9"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+
+[weakdeps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DifferentialGamesBaseSolvers = "b83b0c57-42fa-43ab-a182-d5be40f43772"
+GLMakie = "e9467ef8-e4e7-5192-8a1a-b1aee30e663a"
+Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+
+[sources]
+DifferentialGamesBase = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBase.jl", rev = "main"}
+DifferentialGamesBaseSolvers = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBaseSolvers.jl", rev = "main"}
+
+[extensions]
+DifferentialGamesBenchmarksGLMakieExt = ["Makie", "GLMakie"]
+DifferentialGamesBenchmarksSolversExt = ["DifferentialGamesBaseSolvers"]
+DifferentialGamesBenchmarksVizExt = ["Makie", "CairoMakie"]
 
 [compat]
-julia = "1.10.10"
+CairoMakie = "0.13, 0.15"
+DifferentialGamesBase = "0.1"
+DifferentialGamesBaseSolvers = "1"
+GLMakie = "0.10, 0.11"
+Makie = "0.21, 0.22, 0.24"
+julia = "1.11"
 
 [extras]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DifferentialGamesBaseSolvers = "b83b0c57-42fa-43ab-a182-d5be40f43772"
 Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 
 [targets]
-test = ["Test"]
+test = ["Test", "CairoMakie", "DifferentialGamesBaseSolvers"]
