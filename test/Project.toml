@@ -1,0 +1,10 @@
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+DifferentialGamesBase = "a9dd1e63-b4ad-4579-bca8-3a609f3d87b9"
+DifferentialGamesBaseSolvers = "b83b0c57-42fa-43ab-a182-d5be40f43772"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[sources]
+DifferentialGamesBase = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBase.jl", rev = "main"}
+DifferentialGamesBaseSolvers = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBaseSolvers.jl", rev = "main"}
