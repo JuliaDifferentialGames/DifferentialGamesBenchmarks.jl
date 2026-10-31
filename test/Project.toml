@@ -8,3 +8,6 @@ Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
 [sources]
 DifferentialGamesBase = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBase.jl", rev = "main"}
 DifferentialGamesBaseSolvers = {url = "https://github.com/JuliaDifferentialGames/DifferentialGamesBaseSolvers.jl", rev = "main"}
+
+[compat]
+LinearAlgebra = "<0.0.1, 1"
